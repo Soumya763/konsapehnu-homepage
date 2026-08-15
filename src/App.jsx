@@ -53,8 +53,8 @@ function App() {
       {/* ================= NAVBAR ================= */}
 
       <header className="navbar">
-        <a href="#top" className="brand">
-          KONSAPEHNU<span>.</span>
+        <a href="#top" className="brand" aria-label="Kaunsa Pehnu home" style={{ textTransform: "none" }}>
+          Kaunsa Pehnu<span>?</span>
         </a>
 
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
@@ -199,7 +199,7 @@ function App() {
             </h2>
 
             <p>
-              KONSAPEHNU helps you understand your wardrobe,
+              Kaunsa Pehnu helps you understand your wardrobe,
               discover better combinations and dress with more
               confidence — without constantly buying something new.
             </p>
@@ -272,7 +272,7 @@ function App() {
               </h3>
 
               <p>
-                KONSAPEHNU learns your preferences,
+                Kaunsa Pehnu learns your preferences,
                 wardrobe and lifestyle.
               </p>
 
@@ -549,7 +549,7 @@ function App() {
     <div className="pricing-card">
 
       <div className="pricing-header">
-        <span className="pricing-label">KONSAPEHNU PREMIUM</span>
+        <span className="pricing-label">KAUNSA PEHNU PREMIUM</span>
         <span className="pricing-badge">BEST VALUE</span>
       </div>
 
@@ -621,7 +621,7 @@ function App() {
         <section className="final-section reveal">
 
           <p className="eyebrow">
-            KONSAPEHNU
+            Kaunsa Pehnu
           </p>
 
           <h2>
@@ -653,7 +653,7 @@ function App() {
         <div className="footer-brand">
 
           <strong>
-            KONSAPEHNU<span>.</span>
+            Kaunsa Pehnu<span>?</span>
           </strong>
 
           <p>
@@ -679,7 +679,7 @@ function App() {
         </div>
 
         <div className="footer-copy">
-          © 2026 KONSAPEHNU
+          © 2026 Kaunsa Pehnu
         </div>
 
       </footer>
@@ -725,7 +725,7 @@ function App() {
 
                 <p>
                   Leave your details and we'll let you know
-                  when KONSAPEHNU is ready.
+                  when Kaunsa Pehnu is ready.
                 </p>
 
                 <form onSubmit={handleSubmit}>
@@ -770,7 +770,7 @@ function App() {
                 <h2>
                   Welcome to
                   <br />
-                  KONSAPEHNU.
+                  Kaunsa Pehnu?
                 </h2>
 
                 <p>
