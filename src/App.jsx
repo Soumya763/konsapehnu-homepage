@@ -53,8 +53,8 @@ function App() {
       {/* ================= NAVBAR ================= */}
 
       <header className="navbar">
-        <a href="#top" className="brand" aria-label="Kaunsa Pehnu home" style={{ textTransform: "none" }}>
-          Kaunsa Pehnu<span>?</span>
+        <a href="#top" className="brand" aria-label="Konsa Pehnu home" style={{ textTransform: "none" }}>
+          Konsa Pehnu<span>?</span>
         </a>
 
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
@@ -199,7 +199,7 @@ function App() {
             </h2>
 
             <p>
-              Kaunsa Pehnu helps you understand your wardrobe,
+              Konsa Pehnu helps you understand your wardrobe,
               discover better combinations and dress with more
               confidence — without constantly buying something new.
             </p>
@@ -272,7 +272,7 @@ function App() {
               </h3>
 
               <p>
-                Kaunsa Pehnu learns your preferences,
+                Konsa Pehnu learns your preferences,
                 wardrobe and lifestyle.
               </p>
 
@@ -549,7 +549,7 @@ function App() {
     <div className="pricing-card">
 
       <div className="pricing-header">
-        <span className="pricing-label">KAUNSA PEHNU PREMIUM</span>
+        <span className="pricing-label">KONSA PEHNU PREMIUM</span>
         <span className="pricing-badge">BEST VALUE</span>
       </div>
 
@@ -621,7 +621,7 @@ function App() {
         <section className="final-section reveal">
 
           <p className="eyebrow">
-            Kaunsa Pehnu
+            Konsa Pehnu
           </p>
 
           <h2>
@@ -653,7 +653,7 @@ function App() {
         <div className="footer-brand">
 
           <strong>
-            Kaunsa Pehnu<span>?</span>
+            Konsa Pehnu<span>?</span>
           </strong>
 
           <p>
@@ -679,7 +679,7 @@ function App() {
         </div>
 
         <div className="footer-copy">
-          © 2026 Kaunsa Pehnu
+          © 2026 Konsa Pehnu
         </div>
 
       </footer>
@@ -725,7 +725,7 @@ function App() {
 
                 <p>
                   Leave your details and we'll let you know
-                  when Kaunsa Pehnu is ready.
+                  when Konsa Pehnu is ready.
                 </p>
 
                 <form onSubmit={handleSubmit}>
@@ -770,7 +770,7 @@ function App() {
                 <h2>
                   Welcome to
                   <br />
-                  Kaunsa Pehnu?
+                  Konsa Pehnu?
                 </h2>
 
                 <p>
