@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# nested V2 project (separate repo, not part of V1)
+konsapehnu/
