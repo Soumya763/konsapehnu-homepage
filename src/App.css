@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 /* =========================================================
    KONSAPEHNU — GLOBAL
@@ -7,12 +7,12 @@
 :root {
   --cream: #f3eee4;
   --paper: #f8f5ee;
-  --black: #171614;
+  --black: #3E2723;
   --muted: #706c63;
   --line: #d8d0c2;
-  --gold: #ad7d3b;
+  --gold: #6B4423;
   --white: #ffffff;
-  --saffron: #c46b32;
+  --saffron: #6B4423;
   --maroon: #6d2634;
   --indigo: #243746;
 
@@ -53,7 +53,7 @@ img {
   min-height: 100vh;
   color: var(--black);
   background: var(--paper);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
 
@@ -216,12 +216,13 @@ h2 {
 h1,
 h2,
 em {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 em {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--gold);
 }
 
 /* =========================================================
@@ -309,14 +310,14 @@ em {
 .hero-section {
   min-height: calc(100vh - 82px);
 
-  padding: 7vw 7vw 8vw;
+  padding: 5vw 5vw 6vw;
 
   display: grid;
   grid-template-columns: 1fr 0.9fr;
 
   align-items: center;
 
-  gap: 7vw;
+  gap: 5vw;
 
   overflow: hidden;
 }
@@ -336,11 +337,12 @@ em {
 }
 
 .hero-content h1 {
-  font-size: clamp(52px, 6.5vw, 92px);
-  line-height: 0.96;
-  letter-spacing: -3px;
+  font-size: clamp(40px, 5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  font-weight: 600;
 
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .hero-description {
@@ -348,10 +350,11 @@ em {
 
   color: var(--muted);
 
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 400;
 
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 }
 
 .hero-actions {
@@ -491,7 +494,7 @@ em {
    ========================================================= */
 
 .intro-section {
-  padding: 11vw 10vw;
+  padding: 8vw 5vw;
 
   border-top: 1px solid var(--line);
 
@@ -509,12 +512,13 @@ em {
 }
 
 .intro-content h2 {
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(28px, 4vw, 32px);
 
-  line-height: 1;
-  letter-spacing: -2px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  font-weight: 600;
 
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .intro-content h2 span {
@@ -536,7 +540,7 @@ em {
 
 .how-section,
 .features-section {
-  padding: 9vw 7vw;
+  padding: 6vw 5vw;
   border-top: 1px solid var(--line);
 }
 
@@ -550,10 +554,11 @@ em {
 }
 
 .section-heading h2 {
-  font-size: clamp(48px, 5vw, 72px);
+  font-size: clamp(28px, 4vw, 32px);
 
-  line-height: 0.98;
-  letter-spacing: -2px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  font-weight: 600;
 
   margin-bottom: 0;
 }
@@ -647,9 +652,9 @@ em {
 .feature-card {
   position: relative;
 
-  min-height: 250px;
+  min-height: 200px;
 
-  padding: 28px;
+  padding: 20px;
 
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -752,7 +757,7 @@ em {
 }
 
 .india-content {
-  padding: 9vw 8vw;
+  padding: 6vw 5vw;
 
   display: flex;
   flex-direction: column;
@@ -760,12 +765,13 @@ em {
 }
 
 .india-content h2 {
-  font-size: clamp(55px, 6vw, 90px);
+  font-size: clamp(28px, 4vw, 32px);
 
-  line-height: 0.92;
-  letter-spacing: -3px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  font-weight: 600;
 
-  margin-bottom: 35px;
+  margin-bottom: 24px;
 }
 
 .india-content > p:not(.eyebrow) {
@@ -816,7 +822,7 @@ em {
 
 .plans-section {
   position: relative;
-  padding: 10vw 7vw;
+  padding: 6vw 5vw;
 
   background:
     radial-gradient(circle at 15% 20%, rgba(173, 125, 59, 0.12), transparent 28%),
@@ -856,11 +862,12 @@ em {
 }
 
 .plans-inner h2 {
-  font-size: clamp(55px, 7vw, 95px);
+  font-size: clamp(28px, 4vw, 32px);
 
-  line-height: 0.9;
+  line-height: 1.1;
+  font-weight: 600;
 
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .plans-inner p:not(.eyebrow) {
@@ -889,7 +896,7 @@ em {
    ========================================================= */
 
 .final-section {
-  padding: 11vw 7vw;
+  padding: 6vw 5vw;
 
   text-align: center;
 
@@ -897,12 +904,13 @@ em {
 }
 
 .final-section h2 {
-  font-size: clamp(60px, 8vw, 110px);
+  font-size: clamp(28px, 4vw, 32px);
 
-  line-height: 0.88;
-  letter-spacing: -4px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  font-weight: 600;
 
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .final-section > p:not(.eyebrow) {
@@ -916,13 +924,13 @@ em {
    ========================================================= */
 
 .footer {
-  padding: 45px 7vw;
+  padding: 40px 5vw;
 
   display: grid;
 
   grid-template-columns: 1fr auto auto;
 
-  gap: 60px;
+  gap: 48px;
 
   align-items: end;
 }
@@ -1216,15 +1224,15 @@ em {
   .hero-section {
     grid-template-columns: 1fr;
 
-    padding: 70px 6vw;
+    padding: 50px 5vw;
 
-    gap: 55px;
+    gap: 40px;
   }
 
   .hero-content h1 {
-    font-size: clamp(48px, 14vw, 75px);
+    font-size: clamp(32px, 10vw, 48px);
 
-    letter-spacing: -2px;
+    letter-spacing: -0.5px;
   }
 
   .hero-description {
@@ -1244,9 +1252,9 @@ em {
   .intro-section {
     grid-template-columns: 1fr;
 
-    padding: 80px 7vw;
+    padding: 60px 5vw;
 
-    gap: 35px;
+    gap: 30px;
   }
 
   .section-heading {
@@ -1280,15 +1288,15 @@ em {
   }
 
   .india-content {
-    padding: 80px 7vw;
+    padding: 60px 5vw;
   }
 
   .footer {
     grid-template-columns: 1fr;
 
-    gap: 25px;
+    gap: 20px;
 
-    padding: 40px 7vw;
+    padding: 35px 5vw;
   }
 
   .footer-links {
@@ -1368,11 +1376,11 @@ em {
   }
 
   .plans-section {
-    padding: 90px 7vw;
+    padding: 60px 5vw;
   }
 
   .final-section {
-    padding: 90px 7vw;
+    padding: 60px 5vw;
   }
 
   .interest-modal {
