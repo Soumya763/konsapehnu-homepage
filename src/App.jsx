@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import './App.css'
 
 const HERO_IMAGE =
-   'https://d12d6l12s3d372.cloudfront.net/Tasva_21_12_233514_91c4ffbcd2.jpg'
-   
+   'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=80'
+
 const INDIA_IMAGE =
-  'https://www.creaseindia.com/cdn/shop/files/peach-indo-western-outfit-for-men-indian-ethnicwear.jpg?v=1742020209&width=1100'
+  'https://images.unsplash.com/photo-1506629082632-d43afc496550?w=900&q=80'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
