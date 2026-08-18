@@ -955,13 +955,21 @@ em {
 }
 
 .mock-block {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   aspect-ratio: 1;
   border-radius: 5px;
 
   background: linear-gradient(135deg, var(--gold), var(--saffron));
-  opacity: 0.85;
+  opacity: 0.9;
+}
+
+.mock-block svg {
+  width: 52%;
+  height: 52%;
+  color: var(--cream);
 }
 
 .mock-block-tall {
@@ -970,6 +978,12 @@ em {
   border-radius: 8px;
 
   background: linear-gradient(155deg, var(--maroon), var(--saffron));
+}
+
+.mock-block-tall svg {
+  width: 34%;
+  height: 34%;
+  color: var(--cream);
 }
 
 .mock-stack {

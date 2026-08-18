@@ -130,6 +130,11 @@ const GarmentLabel = ({ label }) => {
   )
 }
 
+const GarmentIcon = ({ label }) => {
+  const Icon = getGarmentIcon(label)
+  return <Icon />
+}
+
 const PhoneMockup = ({ children, activeTab }) => (
   <div className="phone-mockup">
     <div className="phone-notch" />
@@ -153,7 +158,9 @@ const MockupWardrobe = () => (
     <div className="mock-grid">
       {['Kurta', 'Shirt', 'Trouser', 'Blazer', 'Shoes', 'Ethnic'].map((label) => (
         <div className="mock-item" key={label}>
-          <span className="mock-block" />
+          <span className="mock-block">
+            <GarmentIcon label={label} />
+          </span>
           <GarmentLabel label={label} />
         </div>
       ))}
@@ -170,7 +177,9 @@ const MockupStyling = () => (
     <div className="mock-stack">
       {['Navy Blazer', 'White Shirt', 'Dark Trousers'].map((label) => (
         <div className="mock-row-item" key={label}>
-          <span className="mock-block" />
+          <span className="mock-block">
+            <GarmentIcon label={label} />
+          </span>
           <GarmentLabel label={label} />
         </div>
       ))}
@@ -189,11 +198,15 @@ const MockupOccasion = () => (
     <p className="mock-subtitle">12 outfits for Wedding</p>
     <div className="mock-pair">
       <div className="mock-item">
-        <span className="mock-block mock-block-tall" />
+        <span className="mock-block mock-block-tall">
+          <GarmentIcon label="Sherwani" />
+        </span>
         <GarmentLabel label="Sherwani" />
       </div>
       <div className="mock-item">
-        <span className="mock-block mock-block-tall" />
+        <span className="mock-block mock-block-tall">
+          <GarmentIcon label="Bandhgala" />
+        </span>
         <GarmentLabel label="Bandhgala" />
       </div>
     </div>
@@ -213,7 +226,9 @@ const MockupWeather = () => (
     <div className="mock-stack">
       {['Linen Shirt', 'Cotton Trousers'].map((label) => (
         <div className="mock-row-item" key={label}>
-          <span className="mock-block" />
+          <span className="mock-block">
+            <GarmentIcon label={label} />
+          </span>
           <GarmentLabel label={label} />
         </div>
       ))}
@@ -230,9 +245,13 @@ const MockupCombos = () => (
       ['Grey', 'Maroon', '85%'],
     ].map(([a, b, match]) => (
       <div className="mock-combo" key={a + b}>
-        <span className="mock-block" />
+        <span className="mock-block">
+          <GarmentIcon label="Shirt" />
+        </span>
         <span className="mock-plus">+</span>
-        <span className="mock-block" />
+        <span className="mock-block">
+          <GarmentIcon label="Trouser" />
+        </span>
         <span className="mock-match">{match}</span>
       </div>
     ))}
