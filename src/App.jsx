@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
-
-const HERO_IMAGE =
-   'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=80'
+import heroVideo from './assets/hero-video.mp4'
 
 const INDIA_IMAGE =
   'https://images.unsplash.com/photo-1506629082632-d43afc496550?w=900&q=80'
@@ -501,9 +499,13 @@ function App() {
 
             <div className="image-frame hero-image-frame">
 
-              <img
-                src={HERO_IMAGE}
-                alt="Modern Indian men's fashion"
+              <video
+                src={heroVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="Modern Indian men's fashion"
               />
 
               <div className="image-label">
