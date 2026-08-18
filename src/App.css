@@ -859,6 +859,7 @@ em {
   border-radius: 26px;
 
   box-shadow: var(--shadow-soft);
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -875,12 +876,28 @@ em {
   top: 8px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 
   width: 34%;
   height: 11px;
 
   background: var(--black);
   border-radius: 8px;
+}
+
+.phone-screenshot {
+  position: absolute;
+  top: -16px;
+  left: -9px;
+  right: -9px;
+  bottom: -8px;
+  z-index: 0;
+
+  width: calc(100% + 18px);
+  height: calc(100% + 24px);
+
+  object-fit: cover;
+  object-position: top center;
 }
 
 .phone-status {
@@ -905,12 +922,16 @@ em {
 }
 
 .mock-tabbar {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   justify-content: space-between;
 
-  margin-top: 6px;
+  margin-top: auto;
   padding-top: 7px;
 
+  background: var(--cream);
   border-top: 1px solid var(--line);
 }
 

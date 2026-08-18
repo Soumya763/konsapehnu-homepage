@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import heroVideo from './assets/hero-video.mp4'
+import screenWardrobe from './assets/app-screens/wardrobe.png'
+import screenTodaysOutfit from './assets/app-screens/todays-outfit.png'
+import screenOccasion from './assets/app-screens/occasion.png'
+import screenOutfitBuilder from './assets/app-screens/outfit-builder.png'
+import screenAiChat from './assets/app-screens/ai-chat.png'
 
 const INDIA_IMAGE =
   'https://images.unsplash.com/photo-1506629082632-d43afc496550?w=900&q=80'
@@ -135,16 +140,22 @@ const GarmentIcon = ({ label }) => {
   return <Icon />
 }
 
-const PhoneMockup = ({ children, activeTab }) => (
+const PhoneMockup = ({ children, activeTab, screenshot }) => (
   <div className="phone-mockup">
     <div className="phone-notch" />
-    <div className="phone-status">
-      <span>9:41</span>
-      <span>●●●</span>
-    </div>
-    <div className="phone-screen">
-      {children}
-    </div>
+    {screenshot ? (
+      <img alt="" aria-hidden="true" className="phone-screenshot" src={screenshot} />
+    ) : (
+      <>
+        <div className="phone-status">
+          <span>9:41</span>
+          <span>●●●</span>
+        </div>
+        <div className="phone-screen">
+          {children}
+        </div>
+      </>
+    )}
     <TabBar active={activeTab} />
   </div>
 )
@@ -284,6 +295,7 @@ const FEATURES = [
     description: 'Turn your existing clothes into a smart digital wardrobe.',
     Mockup: MockupWardrobe,
     tab: 'wardrobe',
+    screenshot: screenWardrobe,
   },
   {
     number: '02',
@@ -291,6 +303,7 @@ const FEATURES = [
     description: 'Get outfit suggestions that match your style, preferences and wardrobe.',
     Mockup: MockupStyling,
     tab: 'style',
+    screenshot: screenTodaysOutfit,
   },
   {
     number: '03',
@@ -298,6 +311,7 @@ const FEATURES = [
     description: 'Dress confidently for weddings, festivals, office, dates and celebrations.',
     Mockup: MockupOccasion,
     tab: 'style',
+    screenshot: screenOccasion,
   },
   {
     number: '04',
@@ -305,6 +319,7 @@ const FEATURES = [
     description: 'Get recommendations that make sense for your day, location and weather.',
     Mockup: MockupWeather,
     tab: 'home',
+    screenshot: screenTodaysOutfit,
   },
   {
     number: '05',
@@ -312,6 +327,7 @@ const FEATURES = [
     description: 'Discover new combinations from clothes you already own.',
     Mockup: MockupCombos,
     tab: 'wardrobe',
+    screenshot: screenOutfitBuilder,
   },
   {
     number: '06',
@@ -319,6 +335,7 @@ const FEATURES = [
     description: 'A personal styling assistant available whenever you need it.',
     Mockup: MockupChat,
     tab: 'profile',
+    screenshot: screenAiChat,
   },
 ]
 
@@ -712,7 +729,7 @@ function App() {
 
             <div className="feature-grid" ref={featureTrackRef}>
 
-            {FEATURES.map(({ number, lines, description, Mockup, tab }, index) => (
+            {FEATURES.map(({ number, lines, description, Mockup, tab, screenshot }, index) => (
 
               <article
                 key={number}
@@ -738,7 +755,7 @@ function App() {
                 </h3>
 
                 <div className="feature-visual">
-                  <PhoneMockup activeTab={tab}>
+                  <PhoneMockup activeTab={tab} screenshot={screenshot}>
                     <Mockup />
                   </PhoneMockup>
                 </div>
