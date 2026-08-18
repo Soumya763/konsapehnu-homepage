@@ -143,19 +143,17 @@ const GarmentIcon = ({ label }) => {
 const PhoneMockup = ({ children, activeTab, screenshot }) => (
   <div className="phone-mockup">
     <div className="phone-notch" />
-    {screenshot ? (
-      <img alt="" aria-hidden="true" className="phone-screenshot" src={screenshot} />
-    ) : (
-      <>
-        <div className="phone-status">
-          <span>9:41</span>
-          <span>●●●</span>
-        </div>
-        <div className="phone-screen">
-          {children}
-        </div>
-      </>
-    )}
+    <div className="phone-status">
+      <span>9:41</span>
+      <span>●●●</span>
+    </div>
+    <div className="phone-screen">
+      {screenshot ? (
+        <img alt="" aria-hidden="true" className="phone-screenshot" src={screenshot} />
+      ) : (
+        children
+      )}
+    </div>
     <TabBar active={activeTab} />
   </div>
 )

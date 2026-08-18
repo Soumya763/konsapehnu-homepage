@@ -886,18 +886,15 @@ em {
 }
 
 .phone-screenshot {
-  position: absolute;
-  top: -16px;
-  left: -9px;
-  right: -9px;
-  bottom: -8px;
-  z-index: 0;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
 
-  width: calc(100% + 18px);
-  height: calc(100% + 24px);
+  object-fit: contain;
+  object-position: center top;
 
-  object-fit: cover;
-  object-position: top center;
+  border-radius: 4px;
+  background: var(--paper);
 }
 
 .phone-status {
