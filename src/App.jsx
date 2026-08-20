@@ -555,7 +555,7 @@ function App() {
             <article className="outfit-card reveal">
               <div className="image-frame outfit-image-frame">
                 <img
-                  src={outfitDateNight}
+                  src={outfitWorkwear}
                   alt="Date night outfit"
                 />
               </div>
@@ -583,7 +583,7 @@ function App() {
             <article className="outfit-card reveal">
               <div className="image-frame outfit-image-frame">
                 <img
-                  src={outfitWorkwear}
+                  src={outfitDateNight}
                   alt="Workwear outfit"
                 />
               </div>

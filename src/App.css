@@ -2112,10 +2112,17 @@ em {
 
 .love-icon {
   display: block;
-  color: var(--emerald);
-  font-size: 40px;
+  color: var(--gold);
+  font-size: 46px;
   line-height: 1;
   margin-bottom: 12px;
+
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.love-item:hover .love-icon {
+  color: var(--saffron);
+  transform: scale(1.08);
 }
 
 @media (max-width: 800px) {
@@ -2133,7 +2140,7 @@ em {
 .step-icon {
   display: block;
   color: var(--gold);
-  font-size: 36px;
+  font-size: 42px;
   line-height: 1;
   margin-bottom: 12px;
 }
