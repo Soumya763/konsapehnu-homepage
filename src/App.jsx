@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import heroVideo from './assets/hero-video.mp4'
+import indiaSectionImage from './assets/india-section.png'
 import screenWardrobe from './assets/app-screens/wardrobe.png'
 import screenTodaysOutfit from './assets/app-screens/todays-outfit.png'
 import screenOccasion from './assets/app-screens/occasion.png'
 import screenOutfitBuilder from './assets/app-screens/outfit-builder.png'
 import screenAiChat from './assets/app-screens/ai-chat.png'
 
-const INDIA_IMAGE =
-  'https://images.unsplash.com/photo-1506629082632-d43afc496550?w=900&q=80'
+const INDIA_IMAGE = indiaSectionImage
 
 const tabIconProps = {
   viewBox: '0 0 24 24',
@@ -64,82 +64,6 @@ const TabBar = ({ active }) => (
   </div>
 )
 
-const garmentIconProps = {
-  viewBox: '0 0 24 24',
-  fill: 'none',
-  stroke: 'currentColor',
-  strokeWidth: 1.6,
-  strokeLinecap: 'round',
-  strokeLinejoin: 'round',
-}
-
-const IconGarmentShirt = () => (
-  <svg {...garmentIconProps}>
-    <path d="M8.5 4 5 6.5 6.8 9.2 8.5 8v10.5h7V8l1.7 1.2L19 6.5 15.5 4l-1.8 1.5h-3.4L8.5 4Z" />
-  </svg>
-)
-
-const IconGarmentKurta = () => (
-  <svg {...garmentIconProps}>
-    <path d="M9 3.2 6.7 5.4 8.3 8l1-.7v13.2h5.4V7.3l1 .7 1.6-2.6L15 3.2l-1.6 1.3h-2.8L9 3.2Z" />
-  </svg>
-)
-
-const IconGarmentTrouser = () => (
-  <svg {...garmentIconProps}>
-    <path d="M7.2 3.5h9.6l.6 7-1.7 9.8h-2l-.7-8-.7 8h-2L6.6 10.5l.6-7Z" />
-  </svg>
-)
-
-const IconGarmentBlazer = () => (
-  <svg {...garmentIconProps}>
-    <path d="M8.3 4 4.8 6.4 6.2 8.9l2-1.2v12.8h7.6V7.7l2 1.2 1.4-2.5L15.7 4l-1.9 1.4-1.3-1-1 1-1.3-1L8.3 4Z" />
-    <path d="M12 12v6" />
-  </svg>
-)
-
-const IconGarmentShoe = () => (
-  <svg {...garmentIconProps}>
-    <path d="M3.5 17.2c0-.9.7-1.4 1.6-1.7l4.9-1.6 2.7-2.3c.7-.6 1.7-.8 2.5-.4l3.7 1.6c.7.3 1.1 1 1.1 1.7v1.6c0 1.1-.9 2-2 2H4.7c-.7 0-1.2-.5-1.2-1.2Z" />
-    <path d="M9 13.6v-3.4" />
-  </svg>
-)
-
-const IconGarmentEthnic = () => (
-  <svg {...garmentIconProps}>
-    <path d="M9.2 3.6 7.3 5.8l1.3 1.5.6-.4v12.4h5.6V6.9l.6.4 1.3-1.5-1.9-2.2-1.3 1h-2.6l-1.3-1Z" />
-    <path d="M12 4v3.2" />
-  </svg>
-)
-
-const GARMENT_ICONS = [
-  { match: /kurta/i, Icon: IconGarmentKurta },
-  { match: /shirt/i, Icon: IconGarmentShirt },
-  { match: /trouser/i, Icon: IconGarmentTrouser },
-  { match: /blazer/i, Icon: IconGarmentBlazer },
-  { match: /shoe/i, Icon: IconGarmentShoe },
-  { match: /ethnic|sherwani|bandhgala/i, Icon: IconGarmentEthnic },
-]
-
-const getGarmentIcon = (label) =>
-  (GARMENT_ICONS.find(({ match }) => match.test(label)) || GARMENT_ICONS[1]).Icon
-
-const GarmentLabel = ({ label }) => {
-  const Icon = getGarmentIcon(label)
-
-  return (
-    <span className="mock-label-row">
-      <Icon />
-      <span>{label}</span>
-    </span>
-  )
-}
-
-const GarmentIcon = ({ label }) => {
-  const Icon = getGarmentIcon(label)
-  return <Icon />
-}
-
 const PhoneMockup = ({ children, activeTab, screenshot }) => (
   <div className="phone-mockup">
     <div className="phone-notch" />
@@ -158,140 +82,11 @@ const PhoneMockup = ({ children, activeTab, screenshot }) => (
   </div>
 )
 
-const MockupWardrobe = () => (
-  <>
-    <div className="mock-header-row">
-      <p className="mock-topbar">Your Wardrobe</p>
-      <span className="mock-badge">48</span>
-    </div>
-    <div className="mock-grid">
-      {['Kurta', 'Shirt', 'Trouser', 'Blazer', 'Shoes', 'Ethnic'].map((label) => (
-        <div className="mock-item" key={label}>
-          <span className="mock-block">
-            <GarmentIcon label={label} />
-          </span>
-          <GarmentLabel label={label} />
-        </div>
-      ))}
-    </div>
-  </>
-)
-
-const MockupStyling = () => (
-  <>
-    <div className="mock-header-row">
-      <p className="mock-topbar">Today's Outfit</p>
-      <span className="mock-subtitle">Office · 24°C</span>
-    </div>
-    <div className="mock-stack">
-      {['Navy Blazer', 'White Shirt', 'Dark Trousers'].map((label) => (
-        <div className="mock-row-item" key={label}>
-          <span className="mock-block">
-            <GarmentIcon label={label} />
-          </span>
-          <GarmentLabel label={label} />
-        </div>
-      ))}
-    </div>
-    <span className="mock-cta">Create Outfit</span>
-  </>
-)
-
-const MockupOccasion = () => (
-  <>
-    <div className="mock-chips">
-      <span className="mock-chip active">Wedding</span>
-      <span className="mock-chip">Festival</span>
-      <span className="mock-chip">Office</span>
-    </div>
-    <p className="mock-subtitle">12 outfits for Wedding</p>
-    <div className="mock-pair">
-      <div className="mock-item">
-        <span className="mock-block mock-block-tall">
-          <GarmentIcon label="Sherwani" />
-        </span>
-        <GarmentLabel label="Sherwani" />
-      </div>
-      <div className="mock-item">
-        <span className="mock-block mock-block-tall">
-          <GarmentIcon label="Bandhgala" />
-        </span>
-        <GarmentLabel label="Bandhgala" />
-      </div>
-    </div>
-  </>
-)
-
-const MockupWeather = () => (
-  <>
-    <div className="mock-header-row">
-      <span className="mock-weather">
-        <span className="mock-weather-icon">☀</span>
-        <span className="mock-weather-temp">28°</span>
-      </span>
-      <span className="mock-subtitle">Mumbai</span>
-    </div>
-    <p className="mock-topbar">Light fabrics recommended</p>
-    <div className="mock-stack">
-      {['Linen Shirt', 'Cotton Trousers'].map((label) => (
-        <div className="mock-row-item" key={label}>
-          <span className="mock-block">
-            <GarmentIcon label={label} />
-          </span>
-          <GarmentLabel label={label} />
-        </div>
-      ))}
-    </div>
-  </>
-)
-
-const MockupCombos = () => (
-  <>
-    <p className="mock-topbar">3 New Combinations</p>
-    {[
-      ['Navy', 'White', '92%'],
-      ['Beige', 'Black', '88%'],
-      ['Grey', 'Maroon', '85%'],
-    ].map(([a, b, match]) => (
-      <div className="mock-combo" key={a + b}>
-        <span className="mock-block">
-          <GarmentIcon label="Shirt" />
-        </span>
-        <span className="mock-plus">+</span>
-        <span className="mock-block">
-          <GarmentIcon label="Trouser" />
-        </span>
-        <span className="mock-match">{match}</span>
-      </div>
-    ))}
-  </>
-)
-
-const MockupChat = () => (
-  <>
-    <div className="mock-status-row">
-      <span className="mock-dot" />
-      <p className="mock-topbar">AI Stylist</p>
-    </div>
-    <p className="mock-bubble mock-bubble-user">
-      What should I wear tonight?
-    </p>
-    <p className="mock-bubble mock-bubble-ai">
-      Try your navy kurta with white pants.
-    </p>
-    <p className="mock-bubble mock-bubble-user">
-      For a dinner or festival?
-    </p>
-    <span className="mock-input">Ask a style question…</span>
-  </>
-)
-
 const FEATURES = [
   {
     number: '01',
     lines: ['AI', 'Wardrobe'],
     description: 'Turn your existing clothes into a smart digital wardrobe.',
-    Mockup: MockupWardrobe,
     tab: 'wardrobe',
     screenshot: screenWardrobe,
   },
@@ -299,7 +94,6 @@ const FEATURES = [
     number: '02',
     lines: ['Personalized', 'Styling'],
     description: 'Get outfit suggestions that match your style, preferences and wardrobe.',
-    Mockup: MockupStyling,
     tab: 'style',
     screenshot: screenTodaysOutfit,
   },
@@ -307,7 +101,6 @@ const FEATURES = [
     number: '03',
     lines: ['Indian Occasion', 'Styling'],
     description: 'Dress confidently for weddings, festivals, office, dates and celebrations.',
-    Mockup: MockupOccasion,
     tab: 'style',
     screenshot: screenOccasion,
   },
@@ -315,7 +108,6 @@ const FEATURES = [
     number: '04',
     lines: ['Weather', 'Aware'],
     description: 'Get recommendations that make sense for your day, location and weather.',
-    Mockup: MockupWeather,
     tab: 'home',
     screenshot: screenTodaysOutfit,
   },
@@ -323,7 +115,6 @@ const FEATURES = [
     number: '05',
     lines: ['Smart', 'Combinations'],
     description: 'Discover new combinations from clothes you already own.',
-    Mockup: MockupCombos,
     tab: 'wardrobe',
     screenshot: screenOutfitBuilder,
   },
@@ -331,7 +122,6 @@ const FEATURES = [
     number: '06',
     lines: ['AI', 'Stylist'],
     description: 'A personal styling assistant available whenever you need it.',
-    Mockup: MockupChat,
     tab: 'profile',
     screenshot: screenAiChat,
   },
@@ -615,8 +405,7 @@ function App() {
             </div>
 
             <p className="heading-description">
-              No complicated styling rules. Just your clothes,
-              your preferences and a little AI.
+              Your personal stylist, in 3 simple steps.
             </p>
 
           </div>
@@ -631,13 +420,14 @@ function App() {
 
               <div className="step-line" />
 
+              <span className="step-icon" aria-hidden="true">⊕</span>
+
               <h3>
                 Add Your Wardrobe
               </h3>
 
               <p>
-                Upload your clothes and build your own
-                digital wardrobe.
+                Upload photos of your clothes in seconds.
               </p>
 
             </article>
@@ -650,13 +440,14 @@ function App() {
 
               <div className="step-line" />
 
+              <span className="step-icon" aria-hidden="true">✦</span>
+
               <h3>
-                Understand Your Style
+                Get AI Outfit Ideas
               </h3>
 
               <p>
-                Konsa Pehnu learns your preferences,
-                wardrobe and lifestyle.
+                AI creates stylish outfit combinations just for you.
               </p>
 
             </article>
@@ -669,13 +460,117 @@ function App() {
 
               <div className="step-line" />
 
+              <span className="step-icon" aria-hidden="true">✓</span>
+
               <h3>
-                Get Your Outfit
+                Wear with Confidence
               </h3>
 
               <p>
-                Receive personalized recommendations
-                for every occasion.
+                Look good, feel great, every single day.
+              </p>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        {/* ================= WHY YOU'LL LOVE IT ================= */}
+
+        <section
+          className="how-section love-section"
+          id="why-love-it"
+        >
+
+          <div className="section-heading reveal">
+
+            <div>
+
+              <p className="eyebrow">
+                WHY YOU'LL LOVE IT
+              </p>
+
+              <h2>
+                Made to fit
+                <br />
+                <em>your life.</em>
+              </h2>
+
+            </div>
+
+          </div>
+
+          <div className="steps love-grid">
+
+            <article className="step love-item reveal">
+
+              <span className="step-number love-icon" aria-hidden="true">
+                ↺
+              </span>
+
+              <div className="step-line" />
+
+              <h3>
+                Use What You Own
+              </h3>
+
+              <p>
+                Get the most out of your existing wardrobe.
+              </p>
+
+            </article>
+
+            <article className="step love-item reveal reveal-delay">
+
+              <span className="step-number love-icon" aria-hidden="true">
+                ◆
+              </span>
+
+              <div className="step-line" />
+
+              <h3>
+                Outfits for Every Occasion
+              </h3>
+
+              <p>
+                From casual hangouts to weddings, we've got you.
+              </p>
+
+            </article>
+
+            <article className="step love-item reveal reveal-delay-2">
+
+              <span className="step-number love-icon" aria-hidden="true">
+                ✦
+              </span>
+
+              <div className="step-line" />
+
+              <h3>
+                Personalized for You
+              </h3>
+
+              <p>
+                Based on your style, body type &amp; lifestyle.
+              </p>
+
+            </article>
+
+            <article className="step love-item reveal reveal-delay-2">
+
+              <span className="step-number love-icon" aria-hidden="true">
+                ◇
+              </span>
+
+              <div className="step-line" />
+
+              <h3>
+                Save Time &amp; Money
+              </h3>
+
+              <p>
+                No more overthinking or impulse shopping.
               </p>
 
             </article>
@@ -727,7 +622,7 @@ function App() {
 
             <div className="feature-grid" ref={featureTrackRef}>
 
-            {FEATURES.map(({ number, lines, description, Mockup, tab, screenshot }, index) => (
+            {FEATURES.map(({ number, lines, description, tab, screenshot }, index) => (
 
               <article
                 key={number}
@@ -753,9 +648,7 @@ function App() {
                 </h3>
 
                 <div className="feature-visual">
-                  <PhoneMockup activeTab={tab} screenshot={screenshot}>
-                    <Mockup />
-                  </PhoneMockup>
+                  <PhoneMockup activeTab={tab} screenshot={screenshot} />
                 </div>
 
                 <p>

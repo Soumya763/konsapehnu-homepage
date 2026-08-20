@@ -840,11 +840,17 @@ em {
 }
 
 .feature-visual {
+  position: relative;
+
   margin-bottom: 16px;
 
   display: flex;
   justify-content: center;
 }
+
+/* =========================================================
+   PHONE MOCKUP — real app screenshots inside a device frame
+   ========================================================= */
 
 .phone-mockup {
   position: relative;
@@ -956,267 +962,6 @@ em {
   color: var(--gold);
 }
 
-.mock-topbar {
-  margin: 0;
-
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: var(--black);
-}
-
-.mock-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-}
-
-.mock-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  aspect-ratio: 1;
-  border-radius: 5px;
-
-  background: linear-gradient(135deg, var(--gold), var(--saffron));
-  opacity: 0.9;
-}
-
-.mock-block svg {
-  width: 52%;
-  height: 52%;
-  color: var(--cream);
-}
-
-.mock-block-tall {
-  flex: 1;
-
-  border-radius: 8px;
-
-  background: linear-gradient(155deg, var(--maroon), var(--saffron));
-}
-
-.mock-block-tall svg {
-  width: 34%;
-  height: 34%;
-  color: var(--cream);
-}
-
-.mock-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.mock-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-
-  margin-bottom: 8px;
-}
-
-.mock-chip {
-  padding: 4px 7px;
-
-  border: 1px solid var(--line);
-  border-radius: 999px;
-
-  font-size: 6.5px;
-  color: var(--muted);
-}
-
-.mock-chip.active {
-  background: var(--maroon);
-  border-color: var(--maroon);
-  color: white;
-}
-
-.mock-weather {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-}
-
-.mock-weather-icon {
-  font-size: 16px;
-  color: var(--gold);
-}
-
-.mock-weather-temp {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--black);
-}
-
-.mock-combo {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  margin-bottom: 8px;
-}
-
-.mock-combo .mock-block {
-  width: 22px;
-  height: 22px;
-}
-
-.mock-plus {
-  font-size: 10px;
-  color: var(--gold);
-}
-
-.mock-match {
-  margin-left: auto;
-
-  font-size: 6px;
-  font-weight: 600;
-  color: var(--emerald);
-}
-
-.mock-header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
-}
-
-.mock-badge {
-  padding: 2px 6px;
-
-  border-radius: 999px;
-  background: var(--gold);
-
-  font-size: 6px;
-  font-weight: 600;
-  color: white;
-}
-
-.mock-subtitle {
-  margin: 0;
-
-  font-size: 6.5px;
-  color: var(--muted);
-}
-
-.mock-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-}
-
-.mock-row-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.mock-row-item .mock-block {
-  flex: none;
-  width: 20px;
-  height: 20px;
-}
-
-.mock-label-row {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-
-  font-size: 6.5px;
-  color: var(--muted);
-}
-
-.mock-label-row svg {
-  flex: none;
-
-  width: 9px;
-  height: 9px;
-
-  color: var(--gold);
-}
-
-.mock-cta {
-  margin-top: auto;
-
-  padding: 7px;
-
-  border-radius: 999px;
-  background: var(--maroon);
-
-  font-size: 7px;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  color: white;
-  text-align: center;
-}
-
-.mock-pair {
-  display: flex;
-  flex: 1;
-  gap: 8px;
-}
-
-.mock-pair .mock-item {
-  flex: 1;
-}
-
-.mock-status-row {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.mock-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--emerald);
-}
-
-.mock-input {
-  margin-top: auto;
-
-  padding: 7px 9px;
-
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--paper);
-
-  font-size: 6.5px;
-  color: var(--muted);
-}
-
-.mock-bubble {
-  max-width: 85%;
-  margin: 0;
-
-  padding: 7px 9px;
-
-  border-radius: 10px;
-
-  font-size: 7px;
-  line-height: 1.4;
-}
-
-.mock-bubble-user {
-  align-self: flex-end;
-
-  background: var(--black);
-  color: white;
-  border-bottom-right-radius: 2px;
-}
-
-.mock-bubble-ai {
-  align-self: flex-start;
-
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-bottom-left-radius: 2px;
-}
 
 /* =========================================================
    INDIA SECTION
@@ -2116,4 +1861,41 @@ em {
     align-items: flex-start;
     gap: 15px;
   }
+}
+
+/* =========================================================
+   WHY YOU'LL LOVE IT — reuses .how-section/.steps/.step
+   design language; only these new rules are added.
+   ========================================================= */
+
+.love-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.love-icon {
+  display: block;
+  color: var(--emerald);
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 800px) {
+
+  .love-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================================================
+   HOW IT WORKS — subtle per-step icon (new, additive only)
+   ========================================================= */
+
+.step-icon {
+  display: block;
+  color: var(--gold);
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 12px;
 }
