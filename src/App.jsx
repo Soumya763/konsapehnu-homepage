@@ -3,8 +3,12 @@ import './App.css'
 import heroVideo from './assets/hero-video.mp4'
 import heroPoster from './assets/hero-poster.jpg'
 import indiaSectionImage from './assets/india-section.png'
-import outfitCasual from './assets/outfit-casual.jpg'
-import outfitWeddingGuest from './assets/outfit-wedding-guest.jpg'
+import outfitCasual from './assets/outfit-casual-2.jpg'
+import outfitSmartCasual from './assets/outfit-smart-casual.jpg'
+import outfitDateNight from './assets/outfit-date-night.jpg'
+import outfitWeddingGuest from './assets/outfit-wedding-guest-2.jpg'
+import outfitWorkwear from './assets/outfit-workwear.jpg'
+import outfitEverydayStyle from './assets/outfit-everyday-style.jpg'
 import screenWardrobe from './assets/app-screens/wardrobe.png'
 import screenTodaysOutfit from './assets/app-screens/todays-outfit.png'
 import screenOccasion from './assets/app-screens/occasion.png'
@@ -432,7 +436,9 @@ function App() {
               </h3>
 
               <p>
-                Upload photos of your clothes in seconds.
+                Upload photos of your clothes in seconds. Build your
+                digital wardrobe once, so you always know what you
+                already own and what you can style together.
               </p>
 
             </article>
@@ -453,6 +459,8 @@ function App() {
 
               <p>
                 AI creates stylish outfit combinations just for you.
+                Get ideas based on your own wardrobe, your style and
+                the occasion you're dressing for.
               </p>
 
             </article>
@@ -472,7 +480,9 @@ function App() {
               </h3>
 
               <p>
-                Look good, feel great, every single day.
+                Look good, feel great, every single day. Know what
+                works together before you step out, with outfits
+                that feel like you.
               </p>
 
             </article>
@@ -518,29 +528,83 @@ function App() {
               <div className="image-frame outfit-image-frame">
                 <img
                   src={outfitCasual}
-                  alt="Casual outfit for everyday wear"
+                  alt="Casual outfit"
                 />
               </div>
               <span className="section-number">01 — CASUAL</span>
               <p>
-                Easy layers, relaxed fits and everyday pieces that
-                already belong in your wardrobe. See how simple
-                combinations can look effortlessly put together.
+                Easy everyday combinations that look effortless,
+                comfortable and put-together.
               </p>
             </article>
 
-            <article className="outfit-card reveal reveal-delay">
+            <article className="outfit-card reveal">
+              <div className="image-frame outfit-image-frame">
+                <img
+                  src={outfitSmartCasual}
+                  alt="Smart casual outfit"
+                />
+              </div>
+              <span className="section-number">02 — SMART CASUAL</span>
+              <p>
+                Relaxed tailoring and refined basics for days when
+                you want to look sharp without overdressing.
+              </p>
+            </article>
+
+            <article className="outfit-card reveal">
+              <div className="image-frame outfit-image-frame">
+                <img
+                  src={outfitDateNight}
+                  alt="Date night outfit"
+                />
+              </div>
+              <span className="section-number">03 — DATE NIGHT</span>
+              <p>
+                Confident evening combinations that feel polished,
+                personal and naturally stylish.
+              </p>
+            </article>
+
+            <article className="outfit-card reveal">
               <div className="image-frame outfit-image-frame">
                 <img
                   src={outfitWeddingGuest}
                   alt="Wedding guest outfit, festive Indian wear"
                 />
               </div>
-              <span className="section-number">02 — WEDDING GUEST</span>
+              <span className="section-number">04 — WEDDING GUEST</span>
               <p>
-                Dress up without starting from scratch. Discover
-                polished combinations that make the most of what you
-                already own, from subtle details to occasion-ready layers.
+                Occasion-ready dressing that feels sophisticated
+                without needing an entirely new wardrobe.
+              </p>
+            </article>
+
+            <article className="outfit-card reveal">
+              <div className="image-frame outfit-image-frame">
+                <img
+                  src={outfitWorkwear}
+                  alt="Workwear outfit"
+                />
+              </div>
+              <span className="section-number">05 — WORKWEAR</span>
+              <p>
+                Smart, practical combinations that take you from
+                the office to everything that follows.
+              </p>
+            </article>
+
+            <article className="outfit-card reveal">
+              <div className="image-frame outfit-image-frame">
+                <img
+                  src={outfitEverydayStyle}
+                  alt="Everyday style outfit"
+                />
+              </div>
+              <span className="section-number">06 — EVERYDAY STYLE</span>
+              <p>
+                Simple, versatile outfits built around pieces you
+                already own and actually want to wear.
               </p>
             </article>
 
@@ -588,7 +652,9 @@ function App() {
               </h3>
 
               <p>
-                Get the most out of your existing wardrobe.
+                Get the most out of your existing wardrobe. Discover
+                new combinations hiding in pieces you already have,
+                instead of adding more to your closet.
               </p>
 
             </article>
@@ -607,6 +673,8 @@ function App() {
 
               <p>
                 From casual hangouts to weddings, we've got you.
+                Every recommendation is built around the occasion, so
+                you always show up dressed right.
               </p>
 
             </article>
@@ -624,7 +692,9 @@ function App() {
               </h3>
 
               <p>
-                Based on your style, body type &amp; lifestyle.
+                Based on your style, body type &amp; lifestyle. The
+                more you use Konsa Pehnu, the better it understands
+                what actually works for you.
               </p>
 
             </article>
@@ -642,7 +712,9 @@ function App() {
               </h3>
 
               <p>
-                No more overthinking or impulse shopping.
+                No more overthinking or impulse shopping. Spend less
+                time deciding and less money on clothes you'll
+                rarely wear.
               </p>
 
             </article>

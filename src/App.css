@@ -986,31 +986,33 @@ em {
 
 .outfit-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 
-  gap: 5vw;
+  gap: 18px;
 }
 
 .outfit-card .outfit-image-frame {
-  aspect-ratio: 0.333;
+  aspect-ratio: 1;
   max-width: 230px;
 
-  margin: 0 auto 22px;
+  margin: 0 auto 16px;
+}
+
+.outfit-card .outfit-image-frame img {
+  object-position: center 25%;
 }
 
 .outfit-card .section-number {
   display: block;
 
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .outfit-card p {
-  max-width: 340px;
-
   color: var(--muted);
 
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 /* =========================================================
@@ -1753,9 +1755,23 @@ em {
   }
 
   .outfit-grid {
-    grid-template-columns: 1fr;
+    display: flex;
 
-    gap: 40px;
+    gap: 16px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    padding-bottom: 4px;
+  }
+
+  .outfit-card {
+    flex: 0 0 150px;
+  }
+
+  .outfit-card .outfit-image-frame {
+    max-width: 150px;
   }
 
   .india-section {
@@ -2097,7 +2113,7 @@ em {
 .love-icon {
   display: block;
   color: var(--emerald);
-  font-size: 32px;
+  font-size: 40px;
   line-height: 1;
   margin-bottom: 12px;
 }
