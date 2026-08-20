@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import heroVideo from './assets/hero-video.mp4'
+import heroPoster from './assets/hero-poster.jpg'
 import indiaSectionImage from './assets/india-section.png'
 import screenWardrobe from './assets/app-screens/wardrobe.png'
 import screenTodaysOutfit from './assets/app-screens/todays-outfit.png'
@@ -325,10 +326,12 @@ function App() {
 
               <video
                 src={heroVideo}
+                poster={heroPoster}
                 autoPlay
                 muted
                 loop
                 playsInline
+                preload="auto"
                 aria-label="Modern Indian men's fashion"
               />
 

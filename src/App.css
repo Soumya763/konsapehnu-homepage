@@ -390,7 +390,7 @@ em {
   aspect-ratio: 0.78;
 
   overflow: hidden;
-  background: #ddd;
+  background: var(--cream);
 
   transform: scale(0.985);
 
