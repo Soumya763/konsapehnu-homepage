@@ -553,13 +553,17 @@ em {
    ========================================================= */
 
 .how-section,
-.features-section {
+.features-section,
+.stylist-section,
+.outfit-section {
   position: relative;
   padding: 6vw 5vw;
 }
 
 .how-section::before,
-.features-section::before {
+.features-section::before,
+.stylist-section::before,
+.outfit-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -571,7 +575,9 @@ em {
 }
 
 .how-section::after,
-.features-section::after {
+.features-section::after,
+.stylist-section::after,
+.outfit-section::after {
   content: '◆';
   position: absolute;
   top: -6px;
@@ -583,6 +589,17 @@ em {
   background: var(--paper);
   color: var(--gold);
   font-size: 10px;
+}
+
+.how-footnote {
+  margin-top: 50px;
+
+  text-align: center;
+
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--muted);
 }
 
 .section-heading {
@@ -964,6 +981,100 @@ em {
 
 
 /* =========================================================
+   OUTFIT INSPIRATION
+   ========================================================= */
+
+.outfit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 5vw;
+}
+
+.outfit-card .outfit-image-frame {
+  aspect-ratio: 0.333;
+  max-width: 230px;
+
+  margin: 0 auto 22px;
+}
+
+.outfit-card .section-number {
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.outfit-card p {
+  max-width: 340px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   ASK YOUR STYLIST
+   ========================================================= */
+
+.stylist-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+
+  align-items: center;
+
+  gap: 5vw;
+}
+
+.stylist-content h2 {
+  font-size: clamp(32px, 5vw, 40px);
+
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.stylist-content p {
+  max-width: 460px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.stylist-prompts {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.prompt-bubble {
+  border: 1px solid var(--line);
+  border-radius: 4px 16px 16px 16px;
+
+  padding: 16px 20px;
+
+  background: var(--paper);
+  color: var(--black);
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  transition: transform 0.3s var(--ease), border-color 0.3s ease, background 0.3s ease;
+}
+
+.prompt-bubble:hover {
+  background: var(--cream);
+  border-color: var(--gold);
+
+  transform: translateY(-3px) translateX(4px);
+}
+
+/* =========================================================
    INDIA SECTION
    ========================================================= */
 
@@ -1028,9 +1139,14 @@ em {
 }
 
 .occasion-list span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
   border: 1px solid #c9c4b9;
 
-  padding: 9px 13px;
+  padding: 9px 15px 9px 12px;
 
   font-size: 10px;
 
@@ -1043,6 +1159,13 @@ em {
     transform 0.25s ease;
 }
 
+.occasion-icon {
+  font-size: 11px;
+  color: var(--gold);
+
+  transition: color 0.25s ease;
+}
+
 .occasion-list span:hover {
   background: var(--black);
   color: white;
@@ -1050,6 +1173,10 @@ em {
   border-color: var(--black);
 
   transform: translateY(-2px);
+}
+
+.occasion-list span:hover .occasion-icon {
+  color: white;
 }
 
 /* =========================================================
@@ -1142,6 +1269,85 @@ em {
 .plans-section .primary-button:hover {
   background: var(--gold);
   color: white;
+}
+
+/* =========================================================
+   COMING NEXT (ROADMAP)
+   ========================================================= */
+
+.roadmap-section {
+  position: relative;
+  padding: 6vw 5vw;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+}
+
+.roadmap-item {
+  position: relative;
+
+  border-top: 1px solid var(--black);
+
+  padding-top: 20px;
+
+  transition: transform 0.35s var(--ease);
+}
+
+.roadmap-item:hover {
+  transform: translateY(-5px);
+}
+
+.roadmap-tag {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  padding: 4px 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 999px;
+
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.roadmap-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-bottom: 14px;
+}
+
+.roadmap-item p {
+  color: var(--muted);
+
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+  .roadmap-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px 24px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 /* =========================================================
@@ -1534,6 +1740,22 @@ em {
 
   .carousel-arrow {
     display: none;
+  }
+
+  .stylist-section {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .stylist-content p {
+    max-width: none;
+  }
+
+  .outfit-grid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
   }
 
   .india-section {

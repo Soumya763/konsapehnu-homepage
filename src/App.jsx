@@ -3,6 +3,8 @@ import './App.css'
 import heroVideo from './assets/hero-video.mp4'
 import heroPoster from './assets/hero-poster.jpg'
 import indiaSectionImage from './assets/india-section.png'
+import outfitCasual from './assets/outfit-casual.jpg'
+import outfitWeddingGuest from './assets/outfit-wedding-guest.jpg'
 import screenWardrobe from './assets/app-screens/wardrobe.png'
 import screenTodaysOutfit from './assets/app-screens/todays-outfit.png'
 import screenOccasion from './assets/app-screens/occasion.png'
@@ -477,6 +479,73 @@ function App() {
 
           </div>
 
+          <p className="how-footnote reveal">
+            One wardrobe. Many ways to wear it.
+          </p>
+
+        </section>
+
+        {/* ================= OUTFIT INSPIRATION ================= */}
+
+        <section className="outfit-section">
+
+          <div className="section-heading reveal">
+
+            <div>
+
+              <p className="eyebrow">
+                OUTFIT INSPIRATION
+              </p>
+
+              <h2>
+                Real outfits. Real men.
+                <br />
+                <em>Ideas you can actually wear.</em>
+              </h2>
+
+            </div>
+
+            <p className="heading-description">
+              From everyday casual to wedding-ready, discover outfit
+              combinations made for real occasions and real wardrobes.
+            </p>
+
+          </div>
+
+          <div className="outfit-grid">
+
+            <article className="outfit-card reveal">
+              <div className="image-frame outfit-image-frame">
+                <img
+                  src={outfitCasual}
+                  alt="Casual outfit for everyday wear"
+                />
+              </div>
+              <span className="section-number">01 — CASUAL</span>
+              <p>
+                Easy layers, relaxed fits and everyday pieces that
+                already belong in your wardrobe. See how simple
+                combinations can look effortlessly put together.
+              </p>
+            </article>
+
+            <article className="outfit-card reveal reveal-delay">
+              <div className="image-frame outfit-image-frame">
+                <img
+                  src={outfitWeddingGuest}
+                  alt="Wedding guest outfit, festive Indian wear"
+                />
+              </div>
+              <span className="section-number">02 — WEDDING GUEST</span>
+              <p>
+                Dress up without starting from scratch. Discover
+                polished combinations that make the most of what you
+                already own, from subtle details to occasion-ready layers.
+              </p>
+            </article>
+
+          </div>
+
         </section>
 
         {/* ================= WHY YOU'LL LOVE IT ================= */}
@@ -677,6 +746,52 @@ function App() {
 
         </section>
 
+        {/* ================= ASK YOUR STYLIST ================= */}
+
+        <section className="stylist-section">
+
+          <div className="stylist-content reveal">
+
+            <p className="eyebrow">
+              AI STYLIST
+            </p>
+
+            <h2>
+              Ask your stylist
+              <br />
+              <em>anything.</em>
+            </h2>
+
+            <p>
+              Tell Konsa Pehnu where you're going, what you're
+              wearing, or what you want to style — and get
+              personalized outfit ideas from your own wardrobe.
+            </p>
+
+          </div>
+
+          <div className="stylist-prompts">
+
+            <div className="prompt-bubble reveal">
+              What should I wear to a friend's wedding?
+            </div>
+
+            <div className="prompt-bubble reveal reveal-delay">
+              Style my beige trousers three different ways.
+            </div>
+
+            <div className="prompt-bubble reveal reveal-delay-2">
+              Smart-casual look for a 32°C office day?
+            </div>
+
+            <div className="prompt-bubble reveal reveal-delay-2">
+              Help me dress for Diwali.
+            </div>
+
+          </div>
+
+        </section>
+
         {/* ================= INDIA SECTION ================= */}
 
         <section className="india-section">
@@ -712,26 +827,32 @@ function App() {
             <div className="occasion-list">
 
               <span>
+                <span className="occasion-icon" aria-hidden="true">✦</span>
                 Weddings
               </span>
 
               <span>
+                <span className="occasion-icon" aria-hidden="true">◆</span>
                 Festivals
               </span>
 
               <span>
+                <span className="occasion-icon" aria-hidden="true">✓</span>
                 Office
               </span>
 
               <span>
+                <span className="occasion-icon" aria-hidden="true">♥</span>
                 Date Night
               </span>
 
               <span>
+                <span className="occasion-icon" aria-hidden="true">⊕</span>
                 Casual
               </span>
 
               <span>
+                <span className="occasion-icon" aria-hidden="true">↗</span>
                 Indian + Western
               </span>
 
@@ -829,6 +950,66 @@ function App() {
 
   </div>
 </section>
+
+        {/* ================= COMING NEXT ================= */}
+
+        <section className="roadmap-section">
+
+          <div className="section-heading reveal">
+
+            <div>
+
+              <p className="eyebrow">
+                COMING NEXT
+              </p>
+
+              <h2>
+                Always getting
+                <br />
+                <em>smarter.</em>
+              </h2>
+
+            </div>
+
+            <p className="heading-description">
+              Konsa Pehnu keeps learning. Here's what we're building next.
+            </p>
+
+          </div>
+
+          <div className="roadmap-grid">
+
+            <article className="roadmap-item reveal">
+              <span className="roadmap-tag">Coming Soon</span>
+              <span className="step-icon" aria-hidden="true">👁</span>
+              <h3>Virtual Try-On</h3>
+              <p>See how an outfit looks on you before you wear it.</p>
+            </article>
+
+            <article className="roadmap-item reveal reveal-delay">
+              <span className="roadmap-tag">Coming Soon</span>
+              <span className="step-icon" aria-hidden="true">◆</span>
+              <h3>Wardrobe Insights</h3>
+              <p>Most-worn pieces, wardrobe gaps and cost-per-wear.</p>
+            </article>
+
+            <article className="roadmap-item reveal reveal-delay-2">
+              <span className="roadmap-tag">Coming Soon</span>
+              <span className="step-icon" aria-hidden="true">▦</span>
+              <h3>Outfit Planning</h3>
+              <p>Plan what you'll wear for the days ahead, in advance.</p>
+            </article>
+
+            <article className="roadmap-item reveal reveal-delay-2">
+              <span className="roadmap-tag">Coming Soon</span>
+              <span className="step-icon" aria-hidden="true">✦</span>
+              <h3>Style Memory</h3>
+              <p>Gets to know your preferences better over time.</p>
+            </article>
+
+          </div>
+
+        </section>
 
         {/* ================= FINAL CTA ================= */}
 
