@@ -1353,6 +1353,45 @@ em {
 }
 
 /* =========================================================
+   FAQ
+   ========================================================= */
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 36px 60px;
+}
+
+.faq-item h3 {
+  font-size: 17px;
+  font-weight: 600;
+
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.faq-item p a {
+  color: var(--gold);
+}
+
+@media (max-width: 800px) {
+
+  .faq-list {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+}
+
+/* =========================================================
    FINAL CTA
    ========================================================= */
 

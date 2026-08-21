@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import heroVideo from './assets/hero-video.mp4'
 import heroPoster from './assets/hero-poster.jpg'
-import indiaSectionImage from './assets/india-section.png'
+import indiaSectionImage from './assets/india-section.jpg'
 import outfitCasual from './assets/outfit-casual-2.jpg'
 import outfitSmartCasual from './assets/outfit-smart-casual.jpg'
 import outfitDateNight from './assets/outfit-date-night.jpg'
@@ -203,9 +203,29 @@ function App() {
       { threshold: 0.12 }
     )
 
-    revealItems.forEach((item) => observer.observe(item))
+    revealItems.forEach((item) => {
+      const rect = item.getBoundingClientRect()
+      const alreadyInView = rect.top < window.innerHeight && rect.bottom > 0
 
-    return () => observer.disconnect()
+      if (alreadyInView) {
+        item.classList.add('visible')
+      } else {
+        observer.observe(item)
+      }
+    })
+
+    // Failsafe: the hero must never stay invisible waiting on layout/
+    // intersection timing (e.g. a tab that loads in the background).
+    const heroFailsafe = window.setTimeout(() => {
+      document
+        .querySelectorAll('.hero-section .reveal')
+        .forEach((item) => item.classList.add('visible'))
+    }, 1200)
+
+    return () => {
+      observer.disconnect()
+      window.clearTimeout(heroFailsafe)
+    }
   }, [])
 
   const openModal = () => {
@@ -1083,6 +1103,118 @@ function App() {
 
         </section>
 
+        {/* ================= FAQ ================= */}
+
+        <section className="how-section" id="faq">
+
+          <div className="section-heading reveal">
+
+            <div>
+
+              <p className="eyebrow">
+                FAQ
+              </p>
+
+              <h2>
+                Questions,
+                <br />
+                <em>answered.</em>
+              </h2>
+
+            </div>
+
+            <p className="heading-description">
+              Everything you might want to know before you start.
+            </p>
+
+          </div>
+
+          <div className="faq-list">
+
+            <article className="faq-item reveal">
+              <h3>What is Konsa Pehnu?</h3>
+              <p>
+                Konsa Pehnu is an AI stylist for Indian men. It helps you
+                digitize your wardrobe and get personalized outfit ideas
+                for different occasions, built around clothes you already own.
+              </p>
+            </article>
+
+            <article className="faq-item reveal">
+              <h3>How does the AI outfit recommendation work?</h3>
+              <p>
+                You add your wardrobe, tell the AI stylist what you need —
+                an occasion, a look, or a specific item to build around —
+                and it suggests outfit combinations from your own clothes.
+              </p>
+            </article>
+
+            <article className="faq-item reveal">
+              <h3>Do I need to buy new clothes?</h3>
+              <p>
+                No. Konsa Pehnu is built around getting more out of the
+                wardrobe you already have, rather than encouraging
+                unnecessary shopping.
+              </p>
+            </article>
+
+            <article className="faq-item reveal">
+              <h3>How does the wardrobe feature work?</h3>
+              <p>
+                Upload photos of your clothes and Konsa Pehnu organizes
+                them into a digital wardrobe, so you always know what you
+                own and what you can style together.
+              </p>
+            </article>
+
+            <article className="faq-item reveal">
+              <h3>What happens to my uploaded wardrobe photos?</h3>
+              <p>
+                Your photos are used to power your digital wardrobe and
+                outfit recommendations. See our{' '}
+                <a href="/privacy.html">Privacy Policy</a> for full
+                details on how your data is handled.
+              </p>
+            </article>
+
+            <article className="faq-item reveal">
+              <h3>Is my personal data private?</h3>
+              <p>
+                Yes. We don't sell your personal data or wardrobe photos.
+                Full details are in our{' '}
+                <a href="/privacy.html">Privacy Policy</a>.
+              </p>
+            </article>
+
+            <article className="faq-item reveal">
+              <h3>Is there a free plan or a paid plan?</h3>
+              <p>
+                Konsa Pehnu Premium is available as a yearly or monthly
+                subscription — see the Plans section above for current
+                pricing.
+              </p>
+            </article>
+
+            <article className="faq-item reveal">
+              <h3>Can I cancel anytime?</h3>
+              <p>
+                Yes — you can manage or cancel your subscription at any time.
+              </p>
+            </article>
+
+            <article className="faq-item reveal">
+              <h3>What occasions can the app help with?</h3>
+              <p>
+                Weddings, festivals, office, date nights, casual days and
+                Indian + Western looks — Konsa Pehnu is built around how
+                Indian men actually dress across all of them.
+              </p>
+            </article>
+
+          </div>
+
+        </section>
+
         {/* ================= FINAL CTA ================= */}
 
         <section className="final-section reveal">
@@ -1137,6 +1269,14 @@ function App() {
 
           <a href="#plans">
             Plans
+          </a>
+
+          <a href="/privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="/terms.html">
+            Terms of Service
           </a>
 
           <a href="#top">

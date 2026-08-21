@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://konsapehnu.com/sitemap.xml

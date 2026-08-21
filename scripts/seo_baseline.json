@@ -1,0 +1,49 @@
+{
+  "pages": {
+    "index.html": {
+      "title": "Konsa Pehnu \u2013 AI Wardrobe & Personal Stylist for Indian Men",
+      "meta_description": "Konsa Pehnu is an AI stylist for Indian men. Digitize your wardrobe and get personalized outfit ideas for every occasion, without buying new clothes.",
+      "meta_description_length": 149,
+      "canonical": "https://konsapehnu.com/",
+      "robots_meta": null,
+      "json_ld_types": [
+        "Organization",
+        "SoftwareApplication",
+        "FAQPage"
+      ],
+      "img_tags_missing_alt": 0
+    },
+    "privacy.html": {
+      "title": "Privacy Policy \u2013 Konsa Pehnu",
+      "meta_description": "How Konsa Pehnu collects, uses and protects your account, wardrobe photos and styling data.",
+      "meta_description_length": 91,
+      "canonical": "https://konsapehnu.com/privacy.html",
+      "robots_meta": "index, follow",
+      "json_ld_types": [],
+      "img_tags_missing_alt": 0
+    },
+    "terms.html": {
+      "title": "Terms of Service \u2013 Konsa Pehnu",
+      "meta_description": "The terms that govern your use of Konsa Pehnu, the AI wardrobe and outfit styling app for Indian men.",
+      "meta_description_length": 101,
+      "canonical": "https://konsapehnu.com/terms.html",
+      "robots_meta": "index, follow",
+      "json_ld_types": [],
+      "img_tags_missing_alt": 0
+    },
+    "resources.html": {
+      "title": "Style Guides \u2013 Konsa Pehnu",
+      "meta_description": "Upcoming styling guides from Konsa Pehnu on wedding outfits, festival dressing, workwear and everyday looks for Indian men.",
+      "meta_description_length": 123,
+      "canonical": "https://konsapehnu.com/resources.html",
+      "robots_meta": "index, follow",
+      "json_ld_types": [],
+      "img_tags_missing_alt": 0
+    }
+  },
+  "robots_txt_present": true,
+  "robots_txt_has_sitemap_ref": true,
+  "sitemap_xml_present": true,
+  "sitemap_url_count": 4,
+  "llms_txt_present": true
+}
