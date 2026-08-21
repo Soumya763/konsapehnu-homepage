@@ -71,7 +71,7 @@ const TabBar = ({ active }) => (
   </div>
 )
 
-const PhoneMockup = ({ children, activeTab, screenshot }) => (
+const PhoneMockup = ({ children, activeTab, screenshot, alt }) => (
   <div className="phone-mockup">
     <div className="phone-notch" />
     <div className="phone-status">
@@ -80,7 +80,7 @@ const PhoneMockup = ({ children, activeTab, screenshot }) => (
     </div>
     <div className="phone-screen">
       {screenshot ? (
-        <img alt="" aria-hidden="true" className="phone-screenshot" src={screenshot} />
+        <img alt={alt || ''} className="phone-screenshot" src={screenshot} />
       ) : (
         children
       )}
@@ -96,6 +96,7 @@ const FEATURES = [
     description: 'Turn your existing clothes into a smart digital wardrobe.',
     tab: 'wardrobe',
     screenshot: screenWardrobe,
+    screenshotAlt: "Screenshot of the Konsa Pehnu digital wardrobe screen showing a user's cataloged clothing items.",
   },
   {
     number: '02',
@@ -103,6 +104,7 @@ const FEATURES = [
     description: 'Get outfit suggestions that match your style, preferences and wardrobe.',
     tab: 'style',
     screenshot: screenTodaysOutfit,
+    screenshotAlt: "Screenshot of the Konsa Pehnu app showing today's recommended outfit.",
   },
   {
     number: '03',
@@ -110,6 +112,7 @@ const FEATURES = [
     description: 'Dress confidently for weddings, festivals, office, dates and celebrations.',
     tab: 'style',
     screenshot: screenOccasion,
+    screenshotAlt: 'Screenshot of the Konsa Pehnu app showing outfit options for a selected occasion.',
   },
   {
     number: '04',
@@ -117,6 +120,7 @@ const FEATURES = [
     description: 'Get recommendations that make sense for your day, location and weather.',
     tab: 'home',
     screenshot: screenTodaysOutfit,
+    screenshotAlt: "Screenshot of the Konsa Pehnu app showing today's recommended outfit.",
   },
   {
     number: '05',
@@ -124,6 +128,7 @@ const FEATURES = [
     description: 'Discover new combinations from clothes you already own.',
     tab: 'wardrobe',
     screenshot: screenOutfitBuilder,
+    screenshotAlt: 'Screenshot of the Konsa Pehnu outfit builder screen combining wardrobe items into an outfit.',
   },
   {
     number: '06',
@@ -131,6 +136,7 @@ const FEATURES = [
     description: 'A personal styling assistant available whenever you need it.',
     tab: 'profile',
     screenshot: screenAiChat,
+    screenshotAlt: 'Screenshot of a conversation with the Konsa Pehnu AI stylist chat.',
   },
 ]
 
@@ -214,18 +220,7 @@ function App() {
       }
     })
 
-    // Failsafe: the hero must never stay invisible waiting on layout/
-    // intersection timing (e.g. a tab that loads in the background).
-    const heroFailsafe = window.setTimeout(() => {
-      document
-        .querySelectorAll('.hero-section .reveal')
-        .forEach((item) => item.classList.add('visible'))
-    }, 1200)
-
-    return () => {
-      observer.disconnect()
-      window.clearTimeout(heroFailsafe)
-    }
+    return () => observer.disconnect()
   }, [])
 
   const openModal = () => {
@@ -301,7 +296,7 @@ function App() {
 
         <section className="hero-section">
 
-          <div className="hero-content reveal">
+          <div className="hero-content">
 
             <p className="eyebrow">
               AI STYLING • MADE FOR INDIAN MEN
@@ -346,7 +341,7 @@ function App() {
 
           </div>
 
-          <div className="hero-visual reveal reveal-delay">
+          <div className="hero-visual">
 
             <div className="image-frame hero-image-frame">
 
@@ -786,7 +781,7 @@ function App() {
 
             <div className="feature-grid" ref={featureTrackRef}>
 
-            {FEATURES.map(({ number, lines, description, tab, screenshot }, index) => (
+            {FEATURES.map(({ number, lines, description, tab, screenshot, screenshotAlt }, index) => (
 
               <article
                 key={number}
@@ -812,7 +807,7 @@ function App() {
                 </h3>
 
                 <div className="feature-visual">
-                  <PhoneMockup activeTab={tab} screenshot={screenshot} />
+                  <PhoneMockup activeTab={tab} screenshot={screenshot} alt={screenshotAlt} />
                 </div>
 
                 <p>
@@ -1271,11 +1266,15 @@ function App() {
             Plans
           </a>
 
-          <a href="/privacy.html">
+          <a href="/about">
+            About
+          </a>
+
+          <a href="/privacy">
             Privacy Policy
           </a>
 
-          <a href="/terms.html">
+          <a href="/terms">
             Terms of Service
           </a>
 

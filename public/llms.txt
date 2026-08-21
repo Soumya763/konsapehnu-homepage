@@ -19,6 +19,8 @@
 
 - Homepage: https://konsapehnu.com/ — product overview, how it works,
   features, pricing plans, and FAQ.
+- About: https://konsapehnu.com/about.html — what Konsa Pehnu is and why
+  it's built India-first.
 - Style guides: https://konsapehnu.com/resources.html — upcoming styling
   guides (in progress).
 - Privacy Policy: https://konsapehnu.com/privacy.html

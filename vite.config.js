@@ -17,6 +17,7 @@ export default defineConfig({
         privacy: resolveFromRoot('privacy.html'),
         terms: resolveFromRoot('terms.html'),
         resources: resolveFromRoot('resources.html'),
+        about: resolveFromRoot('about.html'),
       },
     },
   },

@@ -39,11 +39,20 @@
       "robots_meta": "index, follow",
       "json_ld_types": [],
       "img_tags_missing_alt": 0
+    },
+    "about.html": {
+      "title": "About \u2013 Konsa Pehnu",
+      "meta_description": "Konsa Pehnu is an AI wardrobe and personal styling app built for Indian men \u2014 helping you dress well with clothes you already own.",
+      "meta_description_length": 130,
+      "canonical": "https://konsapehnu.com/about.html",
+      "robots_meta": "index, follow",
+      "json_ld_types": [],
+      "img_tags_missing_alt": 0
     }
   },
   "robots_txt_present": true,
   "robots_txt_has_sitemap_ref": true,
   "sitemap_xml_present": true,
-  "sitemap_url_count": 4,
+  "sitemap_url_count": 5,
   "llms_txt_present": true
 }

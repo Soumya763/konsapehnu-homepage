@@ -20,7 +20,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASELINE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "seo_baseline.json")
 
-PAGES = ["index.html", "privacy.html", "terms.html", "resources.html"]
+PAGES = ["index.html", "privacy.html", "terms.html", "resources.html", "about.html"]
 
 
 def read(path):
