@@ -353,6 +353,7 @@ function App() {
                 loop
                 playsInline
                 preload="auto"
+                fetchPriority="high"
                 aria-label="Modern Indian men's fashion"
               />
 
@@ -1167,7 +1168,7 @@ function App() {
               <p>
                 Your photos are used to power your digital wardrobe and
                 outfit recommendations. See our{' '}
-                <a href="/privacy.html">Privacy Policy</a> for full
+                <a href="/privacy">Privacy Policy</a> for full
                 details on how your data is handled.
               </p>
             </article>
@@ -1177,7 +1178,7 @@ function App() {
               <p>
                 Yes. We don't sell your personal data or wardrobe photos.
                 Full details are in our{' '}
-                <a href="/privacy.html">Privacy Policy</a>.
+                <a href="/privacy">Privacy Policy</a>.
               </p>
             </article>
 
